@@ -1,19 +1,15 @@
 #include "Student.h"
 #include "Discipline.h"
+#include "OrderedSet.h"
 #include "string"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
-  Student student;
-  student.setName("Fulano");
-  student.setRegistration("m1234");
-  Discipline discipline;
-  discipline.setName("AEDS");
-  discipline.setCode("CCO_01");
-
-  cout << "Student: " << student.getName() << " - " << student.getRegistration() << endl;
-  cout << "Discipline: " << discipline.getName() << " - " << discipline.getCode() << endl;
+  Student<string, int> student1("Joao", 45);
+  MeuTipo< Student<string, int> > mC(student1);
+  mC.print();
 
   return 0;
 }
