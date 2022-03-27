@@ -2,25 +2,34 @@
 #include <iostream>
 using namespace std;
 
+template <class T, class U>
 class Discipline {
 private:
-  string name;
-  string code;
+  T name;
+  U code;
 
 public:
-    string getName() {
+  Discipline(T no, U co) {
+    name = no;
+    code = co;
+  }
+  T getName() {
     return name;
   }
 
-  void setName(string n) {
+  void setName(T n) {
     name = n;
   }
 
-  string getCode() {
+  T getCode() {
     return code;
   }
 
-  void setCode(string c) {
+  void setCode(T c) {
     code = c;
+  }
+
+  void print() {
+  cout << getName() << " - " << getCode() << endl;
   }
 };

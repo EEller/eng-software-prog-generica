@@ -27,4 +27,8 @@ public:
   void setRegistration(U r) {
     registration = r;
   }
+
+  void print() {
+    cout << getName() << " - " << getRegistration() << endl;
+  }
 };
