@@ -23,4 +23,7 @@ public:
     c = (T) (c);
     vetor.push_back(c);
   }
+  int count( void ) {
+    return vetor.size();
+  }
 };

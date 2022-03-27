@@ -18,6 +18,8 @@ int main() {
   VS.insert(student2);
   VS.insert(student3);
   VS.print();
+  int count = VS.count();
+  cout << "cout = " << count << endl;
 
   cout << "UnOrdered Discipline" << endl;
   Discipline<string, string> discipline1("AEDS1", "CCO01");
