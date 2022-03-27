@@ -2,25 +2,29 @@
 #include <iostream>
 using namespace std;
 
+template <class T, class U>
 class Student {
-private:
-  string name;
-  string registration;
+  T name;
+  U registration;
 
 public:
-  string getName() {
+  Student(T no, U id) {
+    name = no;
+    registration = id;
+  }
+  T getName() {
     return name;
   }
 
-  void setName(string n) {
+  void setName(T n) {
     name = n;
   }
 
-  string getRegistration() {
+  U getRegistration() {
     return registration;
   }
 
-  void setRegistration(string r) {
+  void setRegistration(U r) {
     registration = r;
   }
 };
